@@ -9,16 +9,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-theme="dark">
   <header class="hero">
     <div class="content">
-      <p class="eyebrow">ArcGIS Portfolio</p>
-      <h1>Spatial analysis, cartography, and storytelling.</h1>
-      <p class="lede">Maps and notebooks from labs, weekly exercises, and a group project—documenting what I built and learned across ArcGIS.</p>
-      <div class="actions">
-        <a href="#projects" class="button primary">Browse projects</a>
-        <a href="#gallery" class="button ghost">Jump to gallery</a>
+      <div class="hero-text">
+        <p class="eyebrow">ArcGIS Portfolio</p>
+        <h1>Maps I created through GEO 441</h1>
+        <p class="lede">A potfolio showing everything I created in ArcGIS Pro  for GEO 541 under Dr. Jacob Saindon</p>
+        <div class="actions">
+          <a href="#projects" class="button primary">Browse projects</a>
+          <a href="#gallery" class="button ghost">Jump to gallery</a>
+          <button id="theme-toggle" class="button ghost" type="button">Toggle light/dark</button>
+        </div>
       </div>
+      <aside class="profile-card">
+        <div class="profile-card__avatar">
+          <img src="https://avatars.githubusercontent.com/fryan2503?size=200" alt="Portrait of Ryan Singh">
+        </div>
+        <div class="profile-card__body">
+          <h3>Ryan Singh</h3>
+          <p class="muted">MSBA · Data Science</p>
+          <p class="muted">Maps, logistics, and spatial puzzles .</p>
+          <a class="muted" href="https://github.com/fryan2503">github.com/fryan2503</a>
+        </div>
+      </aside>
     </div>
   </header>
 
@@ -27,147 +41,131 @@
       <div class="section-header">
         <p class="eyebrow">Projects</p>
         <h2>Coursework and applied work</h2>
-        <p class="muted">Highlights from labs, weekly exercises, and the capstone group project. Each item links to the notebook or report for deeper context.</p>
+  
       </div>
 
       <div class="card-grid">
         <article class="card">
-          <img src="files/lab-1/RoadsLakes.png" alt="Map of roads and lakes from Lab 1">
+          <a class="card-link" href="files/lab-1/Cloq.png" aria-label="Open Lab 1 clock tower feature in a new tab">
+            <img src="files/lab-1/Cloq.png" alt="Lab 1 clock tower feature">
+          </a>
           <div class="card-body">
             <p class="eyebrow">Lab 1 · Foundations</p>
-            <h3>Digitizing and base mapping</h3>
-            <p>Created base layers for roads, lakes, wetlands, and a clock tower feature to learn digitizing and symbology fundamentals.</p>
+            <h3>GEO 441 Week 1 Assignment: Introduction to ArcGIS Pro </h3>
+            <p> I mostly learnt about how the GUI is setup and how to import data in Arc. I Created a map that shows the the Cloquest forest center and overlaid roads and water ways on to a raaster map.</p>
+            <div class="tags">
+              <span>Digitizing</span><span>Forestry</span><span>Raster</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="files/lab-4/Layout2.png" aria-label="Open Lab 4 alternate thematic layout in a new tab">
+            <img src="files/lab-4/Layout2.png" alt="Lab 4 alternate thematic layout">
+          </a>
+          <div class="card-body">
+            <p class="eyebrow">Lab 4 · Thematic mapping</p>
+            <h3>Data Entry & Digitizing — Alternate symbology take</h3>
+            <p>I created a map for a township and practices creating polygons in ArcGIS Pro, experimenting with unique symbology options to enhance visual clarity. A big focus of this class was to communicate well and make pretty maps</p>
+            <div class="tags">
+              <span>Visual Hierarchy</span><span>Color</span><span>Layout</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card-link" href="files/lab-1/RoadsLakes.png" aria-label="Open Lab 1 roads and lakes digitizing map in a new tab">
+            <img src="files/lab-1/RoadsLakes.png" alt="Lab 1 roads and lakes digitizing">
+          </a>
+          <div class="card-body">
+            <p class="eyebrow">Lab 1 · Foundations</p>
+            <h3>GEO 441 Week 1 Assignment: Introduction to ArcGIS Pro GUI</h3>
+            <p>Built a base map of roads, lakes, wetlands for a township. </p>
             <div class="tags">
               <span>Digitizing</span><span>Symbology</span><span>Annotation</span>
             </div>
-            <div class="links">
-              <a href="files/lab-1/singhr7_lab1.ipynb">Notebook</a>
-              <a href="files/lab-1/Wetlands.png">Wetlands map</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="files/lab-3/Layout1.png" aria-label="Open Lab 3 projection layout map in a new tab">
+            <img src="files/lab-3/Layout1.png" alt="Lab 3 projection layout">
+          </a>
+          <div class="card-body">
+            <p class="eyebrow">Lab 3 · Projections</p>
+            <h3>Projecting Geographic Data</h3>
+            <p>One of my favorite assignments of this class. I created map showing counties in minnesota. This is where I learn about projections and coordinate systems. The big takeway: you cannot show a map accurately on a 2d screen ever – there will always be skewness  </p>
+            <div class="tags">
+              <span>Projection</span><span>Coordinate Systems</span><span>Minnesota</span>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="files/lab-2/Layout.png" alt="Lab 2 map layout">
+          <a class="card-link" href="files/lab-4/Layout3.png" aria-label="Open Lab 4 thematic layout map in a new tab">
+            <img src="files/lab-4/Layout3.png" alt="Lab 4 thematic layout">
+          </a>
           <div class="card-body">
-            <p class="eyebrow">Lab 2</p>
-            <h3>Geodatabase design & layout</h3>
-            <p>Configured a file geodatabase, managed feature classes, and produced a polished layout with legend, scale, and locator.</p>
+            <p class="eyebrow">Lab 4 · Thematic mapping</p>
+            <h3>Data Entry & Digitizing</h3>
+            <p>Hand drew vector polygons by snappning them onto maps. This was a tricky one</p>
             <div class="tags">
-              <span>GDB design</span><span>Cartography</span><span>Layout</span>
-            </div>
-            <div class="links">
-              <a href="files/lab-2/RyanSinghWeek2_F25.ipynb">Notebook</a>
-              <a href="files/lab-2/gdb_screenshot.png">GDB view</a>
+              <span>Polygon</span><span>Digitizing</span>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="files/lab-3/Layout1.png" alt="Lab 3 layout">
+          <a class="card-link" href="files/lab-5/Part3.png" aria-label="Open Lab 5 raster output 3 map in a new tab">
+            <img src="files/lab-5/Part3.png" alt="Lab 5 raster output 3">
+          </a>
           <div class="card-body">
-            <p class="eyebrow">Lab 3</p>
-            <h3>Map compilation</h3>
-            <p>Combined multiple data sources into a clean map layout, focusing on labeling, hierarchy, and print-ready export.</p>
+            <p class="eyebrow">Lab 5 · Querying Vector Data</p>
+            <h3>Lab 5 · Raster output 3</h3>
+            <p>Joined SQL tables and created a map for sil types. This map displays soil polygons symbolized by fertility class, derived through a join between the soils shapefile and a custom soil properties table.</p>
             <div class="tags">
-              <span>Labeling</span><span>Export</span><span>Design</span>
-            </div>
-            <div class="links">
-              <a href="files/lab-3/Week-03-assignment-singhr7.ipynb">Notebook</a>
+              <span>Raster</span><span>Vector Analysis</span><span>SQL</span>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="files/lab-4/Layout3.png" alt="Lab 4 layout showing thematic mapping">
+          <a class="card-link" href="files/week-8/Lower_water.png" aria-label="Open Week 8 lowered water visualization map in a new tab">
+            <img src="files/week-8/Lower_water.png" alt="Week 8 lowered water visualization">
+          </a>
           <div class="card-body">
-            <p class="eyebrow">Lab 4</p>
-            <h3>Thematic mapping</h3>
-            <p>Built thematic layouts exploring classification, color ramps, and page elements to guide readers through the data story.</p>
+            <p class="eyebrow">Week 8 · Elevation</p>
+            <h3>Week 8 lowered water visualization</h3>
+            <p>Worked with elevation maps. Leart a cool fact that elevation is actually stored a image files – each cell has a heeight and is 2d matrix. </p>
             <div class="tags">
-              <span>Classification</span><span>Color</span><span>Layout</span>
-            </div>
-            <div class="links">
-              <a href="files/lab-4/Singhr7 04-assignment-template.ipynb">Notebook</a>
-              <a href="files/lab-4/Layout2.png">Alt layout</a>
+              <span>Elevation</span><span>Elevation Map</span>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="files/lab-5/Part2.png" alt="Raster analysis output from Lab 5">
+          <a class="card-link" href="files/week-9/singhr7_topo.png" aria-label="Open Topographic analysis output map in a new tab">
+            <img src="files/week-9/singhr7_topo.png" alt="Topographic analysis output">
+          </a>
           <div class="card-body">
-            <p class="eyebrow">Lab 5</p>
-            <h3>Raster analysis practice</h3>
-            <p>Ran raster processing workflows and compared outputs to understand how parameters shape terrain and suitability results.</p>
+            <p class="eyebrow">Week 9 · Topography</p>
+            <h3>Topography & slope zonal statistics</h3>
+            <p>Calculated slope-based zonal stats and paired them with topo visuals for the city of Oxford. I knew Oxford was hilly because I run and cycle around town. </p>
             <div class="tags">
-              <span>Raster</span><span>Suitability</span><span>Modeling</span>
-            </div>
-            <div class="links">
-              <a href="files/lab-5/Singhr7 week-05-assignment-template.ipynb">Notebook</a>
-              <a href="files/lab-5/Part1.png">Output 1</a>
-              <a href="files/lab-5/Part3.png">Output 3</a>
+              <span>Zonal stats</span><span>Slope</span><span>Elevation</span>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="files/week-8/Lower_water.png" alt="Hydrology lowering water level map">
+          <a class="card-link" href="files/week-10/Layout.png" aria-label="Open Week 10 layout showing final map in a new tab">
+            <img src="files/week-10/Layout.png" alt="Week 10 layout showing final map">
+          </a>
           <div class="card-body">
-            <p class="eyebrow">Week 8</p>
-            <h3>Hydrology experiment</h3>
-            <p>Explored water level adjustments to study inundation patterns and hydrologic response in a test area.</p>
+            <p class="eyebrow">Week 10 · Outbreak context</p>
+            <h3>Vector Data / Spatial Analysis</h3>
+            <p>Mapped cholera outbreaks in london just as John Snow did in the 1850s, using spatial analysis to identify the source of the outbreak. Learnt Proximity Analysis and buffer analysis</p>
             <div class="tags">
-              <span>Hydrology</span><span>Raster</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="files/week-9/singhr7_topo.png" alt="Topographic analysis output">
-          <div class="card-body">
-            <p class="eyebrow">Week 9</p>
-            <h3>Topo & slope zonal stats</h3>
-            <p>Calculated slope-based zonal statistics and produced topographic visualizations to compare terrain characteristics.</p>
-            <div class="tags">
-              <span>Zonal stats</span><span>Slope</span><span>Visualization</span>
-            </div>
-            <div class="links">
-              <a href="files/week-9/singhr7_09_assignment_template.json">Config</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="files/week-10/Layout.png" alt="Week 10 layout showing final map">
-          <div class="card-body">
-            <p class="eyebrow">Week 10</p>
-            <h3>Layout refinements</h3>
-            <p>Iterated on page layout, symbology, and supporting elements to deliver a clean final map series.</p>
-            <div class="tags">
-              <span>Layout</span><span>Iteration</span><span>Symbology</span>
-            </div>
-            <div class="links">
-              <a href="files/week-10/singhr7-week-10-assignment-template.ipynb">Notebook</a>
-              <a href="files/week-10/Layout1.png">Alt layout</a>
-              <a href="files/week-10/Layout (1).png">Layout detail</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="files/week-8/Lower_water.png" alt="Abstract hero for group project">
-          <div class="card-body">
-            <p class="eyebrow">Group Project</p>
-            <h3>Applied research</h3>
-            <p>Collaborative project documenting the research plan, analysis, and presentations for a semester-long spatial study.</p>
-            <div class="tags">
-              <span>Collaboration</span><span>Reporting</span>
-            </div>
-            <div class="links">
-              <a href="files/group-project/Final Report.docx">Final report</a>
-              <a href="files/group-project/Final Presentation.pptx">Presentation</a>
-              <a href="files/group-project/Proposal Presentation.pptx">Proposal</a>
+              <span>Spatial Join</span><span>Buffer Analysis</span><span>Public Health</span>
             </div>
           </div>
         </article>
@@ -178,67 +176,109 @@
       <div class="section-header">
         <p class="eyebrow">Gallery</p>
         <h2>Selected outputs</h2>
-        <p class="muted">Local PNG exports from the ArcGIS projects, ready for quick browsing.</p>
+        <p class="muted">Gallery = all the png maps I could dig up for this portfolio, no random night sky shots cluttering the flow.</p>
       </div>
       <div class="gallery">
         <figure>
-          <img src="files/lab-1/Cloq.png" alt="Lab 1 clock tower map">
+          <a class="gallery-link" href="files/lab-1/Cloq.png" aria-label="Open Lab 1 clock tower feature map in a new tab">
+            <img src="files/lab-1/Cloq.png" alt="Lab 1 clock tower map">
+          </a>
           <figcaption>Lab 1 · Clock tower feature</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-1/Wetlands.png" alt="Wetlands map from Lab 1">
+          <a class="gallery-link" href="files/lab-1/RoadsLakes.png" aria-label="Open Lab 1 roads, lakes, and wetlands map in a new tab">
+            <img src="files/lab-1/RoadsLakes.png" alt="Lab 1 roads and lakes base map">
+          </a>
+          <figcaption>Lab 1 · Roads, lakes, and wetlands</figcaption>
+        </figure>
+        <figure>
+          <a class="gallery-link" href="files/lab-1/Wetlands.png" aria-label="Open Lab 1 wetlands mapping in a new tab">
+            <img src="files/lab-1/Wetlands.png" alt="Lab 1 wetlands area">
+          </a>
           <figcaption>Lab 1 · Wetlands mapping</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-2/Layout.png" alt="Lab 2 layout">
-          <figcaption>Lab 2 · Final layout</figcaption>
+          <a class="gallery-link" href="files/lab-2/Layout.png" aria-label="Open Lab 2 layout with legend and scale in a new tab">
+            <img src="files/lab-2/Layout.png" alt="Lab 2 printed layout">
+          </a>
+          <figcaption>Lab 2 · Layout with legend and scale</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-3/Layout1.png" alt="Lab 3 layout">
-          <figcaption>Lab 3 · Compilation layout</figcaption>
+          <a class="gallery-link" href="files/lab-2/gdb_screenshot.png" aria-label="Open Lab 2 file geodatabase overview in a new tab">
+            <img src="files/lab-2/gdb_screenshot.png" alt="Lab 2 geodatabase structure">
+          </a>
+          <figcaption>Lab 2 · File geodatabase overview</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-4/Layout3.png" alt="Lab 4 thematic layout">
+          <a class="gallery-link" href="files/lab-3/Layout1.png" aria-label="Open Lab 3 projection comparison layout in a new tab">
+            <img src="files/lab-3/Layout1.png" alt="Lab 3 projection comparison">
+          </a>
+          <figcaption>Lab 3 · Projection comparison layout</figcaption>
+        </figure>
+        <figure>
+          <a class="gallery-link" href="files/lab-4/Layout3.png" aria-label="Open Lab 4 thematic mapping in a new tab">
+            <img src="files/lab-4/Layout3.png" alt="Lab 4 thematic layout">
+          </a>
           <figcaption>Lab 4 · Thematic mapping</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-4/Layout2.png" alt="Lab 4 alternate layout">
-          <figcaption>Lab 4 · Alternate layout</figcaption>
+          <a class="gallery-link" href="files/lab-4/Layout2.png" aria-label="Open Lab 4 alternate symbology layout in a new tab">
+            <img src="files/lab-4/Layout2.png" alt="Lab 4 alternate thematic layout">
+          </a>
+          <figcaption>Lab 4 · Alternate symbology</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-5/Part1.png" alt="Lab 5 raster output 1">
+          <a class="gallery-link" href="files/lab-5/Part1.png" aria-label="Open Lab 5 raster output 1 map in a new tab">
+            <img src="files/lab-5/Part1.png" alt="Lab 5 raster output 1">
+          </a>
           <figcaption>Lab 5 · Raster output 1</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-5/Part2.png" alt="Lab 5 raster output 2">
+          <a class="gallery-link" href="files/lab-5/Part2.png" aria-label="Open Lab 5 raster output 2 map in a new tab">
+            <img src="files/lab-5/Part2.png" alt="Lab 5 raster output 2">
+          </a>
           <figcaption>Lab 5 · Raster output 2</figcaption>
         </figure>
         <figure>
-          <img src="files/lab-5/Part3.png" alt="Lab 5 raster output 3">
+          <a class="gallery-link" href="files/lab-5/Part3.png" aria-label="Open Lab 5 raster output 3 map in a new tab">
+            <img src="files/lab-5/Part3.png" alt="Lab 5 raster output 3">
+          </a>
           <figcaption>Lab 5 · Raster output 3</figcaption>
         </figure>
         <figure>
-          <img src="files/week-8/Lower_water.png" alt="Week 8 lowered water visualization">
-          <figcaption>Week 8 · Lower water visualization</figcaption>
+          <a class="gallery-link" href="files/week-8/Lower_water.png" aria-label="Open Week 8 lowered water visualization in a new tab">
+            <img src="files/week-8/Lower_water.png" alt="Week 8 lowered water visualization">
+          </a>
+          <figcaption>Week 8 · Lowered water, hydrology demo</figcaption>
         </figure>
         <figure>
-          <img src="files/week-9/singhr7_topo.png" alt="Week 9 topographic map">
-          <figcaption>Week 9 · Topo map</figcaption>
+          <a class="gallery-link" href="files/week-9/singhr7_topo.png" aria-label="Open Week 9 topographic map in a new tab">
+            <img src="files/week-9/singhr7_topo.png" alt="Week 9 topographic map">
+          </a>
+          <figcaption>Week 9 · Topographic map</figcaption>
         </figure>
         <figure>
-          <img src="files/week-9/singhr7_slope_zonal.png" alt="Week 9 slope zonal statistics map">
+          <a class="gallery-link" href="files/week-9/singhr7_slope_zonal.png" aria-label="Open Week 9 slope zonal stats map in a new tab">
+            <img src="files/week-9/singhr7_slope_zonal.png" alt="Week 9 slope zonal statistics map">
+          </a>
           <figcaption>Week 9 · Slope zonal stats</figcaption>
         </figure>
         <figure>
-          <img src="files/week-10/Layout.png" alt="Week 10 layout">
-          <figcaption>Week 10 · Layout</figcaption>
+          <a class="gallery-link" href="files/week-10/Layout.png" aria-label="Open Week 10 cholera outbreak layout in a new tab">
+            <img src="files/week-10/Layout.png" alt="Week 10 layout">
+          </a>
+          <figcaption>Week 10 · Cholera outbreak layout</figcaption>
         </figure>
         <figure>
-          <img src="files/week-10/Layout1.png" alt="Week 10 alternative layout">
-          <figcaption>Week 10 · Alt layout</figcaption>
+          <a class="gallery-link" href="files/week-10/Layout1.png" aria-label="Open Week 10 alternate cholera layout in a new tab">
+            <img src="files/week-10/Layout1.png" alt="Week 10 alternate layout">
+          </a>
+          <figcaption>Week 10 · Alternate cholera layout</figcaption>
         </figure>
         <figure>
-          <img src="files/week-10/Layout (1).png" alt="Week 10 detail layout">
+          <a class="gallery-link" href="files/week-10/Layout (1).png" aria-label="Open Week 10 layout detail in a new tab">
+            <img src="files/week-10/Layout (1).png" alt="Week 10 layout detail">
+          </a>
           <figcaption>Week 10 · Layout detail</figcaption>
         </figure>
       </div>
@@ -248,5 +288,13 @@
   <footer class="footer">
     <p>Built by Ryan Singh · ArcGIS coursework & projects</p>
   </footer>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    toggle?.addEventListener('click', () => {
+      const next = body.dataset.theme === 'dark' ? 'light' : 'dark';
+      body.dataset.theme = next;
+    });
+  </script>
 </body>
 </html>
